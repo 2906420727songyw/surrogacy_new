@@ -95,6 +95,49 @@ const FifthSection = () => {
       }}>
         <p>关于我们</p>
       </div>
+
+      {/* 新增的列表部分 */}
+      <div style={{
+        padding: '30px 150px 65px 150px', // 上内边距30px，左右内边距150px，下内边距65px
+        width: '100%', // 宽度100%
+        display: 'flex',
+        flexWrap: 'wrap', // 允许换行
+        justifyContent: 'space-between', // 列表项之间的间距
+      }}>
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div key={index} style={{
+            borderRadius: '10px', // 圆角
+            margin: '0 10px 20px 0', // 列表项之间的距离
+            flex: '1 1 calc(25% - 20px)', // 每个项占据25%的宽度，减去间距
+            boxSizing: 'border-box', // 包含内边距和边框
+            textAlign: 'left', // 确保内容左对齐
+          }}>
+            <h3 style={{ margin: '0 0 20px 0', color: '#ffffff', fontFamily: 'FZShuiYunS-DB-GB', fontSize: '14px', fontWeight: '400', lineHeight: '17.23px' }}>News {index + 1}</h3>
+            <hr style={{ margin: '0 0 20px 0', borderColor: '#C9C9C9' }} /> {/* 分割线 */}
+            <img src="/images/image1.png" alt={`新闻图片 ${index + 1}`} style={{ width: '270px', height: '300px', borderRadius: '10px', marginBottom: '16px' }} />
+            <p style={{ margin: '0 0 22px 0', color: '#ffffff', fontFamily: 'PingFang SC', fontSize: '20px', fontWeight: '400', lineHeight: '34px' }}>How To Deliver a Successful Product Launch</p>
+            <p style={{ margin: '0', color: '#ffffff', fontFamily: 'PingFang SC', fontSize: '16px', fontWeight: '400', lineHeight: '22.4px' }}>29 Jun 2022, by Joshua Nash</p>
+          </div>
+        ))}
+      </div>
+
+      {/* 加载更多按钮 */}
+      <button style={{
+        marginTop: '20px',
+        padding: '0px 18px',
+        width: '133px', // 设置按钮宽度
+        height: '36px', // 设置按钮高度
+        fontSize: '18px', // 设置字体大小
+        fontWeight: '400',
+        lineHeight: '36px', // 设置行高与按钮高度相同以确保垂直居中
+        borderRadius: '5px',
+        backgroundColor: '#FFFFFF',
+        color: '#000000', // 设置字体颜色为黑色
+        border: 'none',
+        cursor: 'pointer',
+      }}>
+        加载更多
+      </button>
     </div>
   );
 };
