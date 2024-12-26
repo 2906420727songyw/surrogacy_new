@@ -5,7 +5,11 @@ import Button from '../components/Button';
 import HeroSection from '../components/HeroSection';
 import ThirdSection from '../components/ThirdSection';
 import FourthSection from '../components/FourthSection';
-import FifthSection from '../components/FifthSection'; 
+import FifthSection from '../components/FifthSection';
+import SixthSection from '../components/SixthSection';
+import SeventhSection from '../components/SeventhSection';
+import Footer from '../components/Footer';
+import CustomerService from '../components/CustomerService';
 
 const Home = () => {
   return (
@@ -95,6 +99,10 @@ const Home = () => {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <SixthSection />
+      <SeventhSection />
+      <Footer />
+      <CustomerService />
     </div>
   );
 };
